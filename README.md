@@ -1,7 +1,7 @@
-# junit5-jupiter-starter-maven
 
-The `junit5-jupiter-starter-maven` project demonstrates how to execute JUnit Jupiter
-tests using Maven.
+# TQS_116726
 
-Please note that this project uses the [Maven Wrapper](https://github.com/takari/maven-wrapper).
-Thus, to ensure that the correct version of Maven is used, invoke `mvnw` instead of `mvn`.
+Software Testing and Quality Repository
+
+Juliusz Szymajda 116726
+
