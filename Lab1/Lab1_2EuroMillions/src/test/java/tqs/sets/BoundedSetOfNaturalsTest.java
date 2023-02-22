@@ -54,8 +54,11 @@ class BoundedSetOfNaturalsTest {
 
     @Test
     void testAddElementThatAlreadyExists() {
-        setA.add(120);
-        assertThrows(IllegalArgumentException.class, () -> setA.add(120));
+        assertThrows(IllegalArgumentException.class, () -> setB.add(60));
+    }
+    @Test
+    void testAddNegativeElement() {
+        assertThrows(IllegalArgumentException.class, () -> setA.add(-10));
     }
     @Test
     void testSetIntersection() {
@@ -66,5 +69,18 @@ class BoundedSetOfNaturalsTest {
     void testEquals() {
         setB = setA;
         assertEquals(setA, setB);
+    }
+    @Test
+    void testHashCode() {
+        assertNotEquals(setB.hashCode(), setC.hashCode());
+    }
+    @Test
+    void testEqualsWhenNull() {
+        assertFalse(setA.equals(null));
+    }
+    @Test
+    void testEqualsWhenDifferentClass() {
+        int number = 0;
+        assertFalse(setA.equals(number));
     }
 }
