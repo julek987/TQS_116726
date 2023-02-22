@@ -30,20 +30,16 @@ class BoundedSetOfNaturalsTest {
         setA = setB = setC = null;
     }
 
-    @Disabled("TODO revise test logic")
+    //@Disabled("TODO revise test logic")
     @Test
     public void testAddElement() {
 
         setA.add(99);
-        assertTrue(setA.contains(99), "add: added element not found in set.");
+        assertTrue(setA.contains(99), "add: added element found in set.");
         assertEquals(1, setA.size());
-
-        setB.add(11);
-        assertTrue(setB.contains(11), "add: added element not found in set.");
-        assertEquals(7, setB.size(), "add: elements count not as expected.");
     }
 
-    @Disabled("TODO revise to test the construction from invalid arrays")
+    //@Disabled("TODO revise to test the construction from invalid arrays")
     @Test
     public void testAddFromBadArray() {
         int[] elems = new int[]{10, -20, -30};
@@ -51,6 +47,24 @@ class BoundedSetOfNaturalsTest {
         // must fail with exception
         assertThrows(IllegalArgumentException.class, () -> setA.add(elems));
     }
+    @Test
+    void testAddElementToFullSet() {
+        assertThrows(IllegalArgumentException.class, () -> setB.add(11));
+    }
 
-
+    @Test
+    void testAddElementThatAlreadyExists() {
+        setA.add(120);
+        assertThrows(IllegalArgumentException.class, () -> setA.add(120));
+    }
+    @Test
+    void testSetIntersection() {
+        assertTrue(setB.intersects(setC));
+        assertFalse(setA.intersects(setC));
+    }
+    @Test
+    void testEquals() {
+        setB = setA;
+        assertEquals(setA, setB);
+    }
 }
