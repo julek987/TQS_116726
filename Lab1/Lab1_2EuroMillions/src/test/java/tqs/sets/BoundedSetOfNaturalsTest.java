@@ -20,7 +20,7 @@ class BoundedSetOfNaturalsTest {
 
     @BeforeEach
     public void setUp() {
-        setA = new BoundedSetOfNaturals(1);
+        setA = new BoundedSetOfNaturals(2);
         setB = BoundedSetOfNaturals.fromArray(new int[]{10, 20, 30, 40, 50, 60});
         setC = BoundedSetOfNaturals.fromArray(new int[]{50, 60});
     }
@@ -54,7 +54,8 @@ class BoundedSetOfNaturalsTest {
 
     @Test
     void testAddElementThatAlreadyExists() {
-        assertThrows(IllegalArgumentException.class, () -> setB.add(60));
+        setA.add(60);
+        assertThrows(IllegalArgumentException.class, () -> setA.add(60));
     }
     @Test
     void testAddNegativeElement() {
