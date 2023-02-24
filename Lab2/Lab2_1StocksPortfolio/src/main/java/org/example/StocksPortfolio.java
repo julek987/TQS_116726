@@ -11,6 +11,7 @@ public class StocksPortfolio {
     }
 
     public void addStock(Stock stock) {
+        stocks.add(stock);
     }
 
     public double getTotalValue() {
