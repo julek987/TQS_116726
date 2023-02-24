@@ -10,8 +10,15 @@ public class StocksPortfolio {
         this.stockmarket = stockmarket;
     }
 
-    public void addStock(Stock stock){};
-    public double getTotalValue(){
-        return 2.0;
+    public void addStock(Stock stock) {
+    }
+
+    public double getTotalValue() {
+        double total = 0;
+        for (Stock stock : stocks) {
+            total += stockmarket.lookUpPrice(stock.getLabel());
+        }
+        return total;
     }
 }
+
