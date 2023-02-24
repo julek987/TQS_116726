@@ -2,9 +2,9 @@ package org.example;
 
 import java.util.List;
 
-public class StocksPortfolio {
+public class StocksPortfolio implements IStockmarketService {
     private List<Stock> stocks;
-    private IStockmarketService stockmarket;
+    private final IStockmarketService stockmarket;
 
     public StocksPortfolio(IStockmarketService stockmarket) {
         this.stockmarket = stockmarket;
@@ -20,6 +20,11 @@ public class StocksPortfolio {
             total += stockmarket.lookUpPrice(stock.getLabel());
         }
         return total;
+    }
+
+    @Override
+    public double lookUpPrice(String stockName) {
+        return 0;
     }
 }
 
