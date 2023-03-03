@@ -1,5 +1,5 @@
 package org.example;
 
 public interface IStockmarketService {
-    public double lookUpPrice(String stockName);
+  double lookUpPrice(String stockName);
 }
