@@ -1,4 +1,4 @@
-package org.example;
+package geocoding;
 
 public interface IStockmarketService {
   double lookUpPrice(String stockName);

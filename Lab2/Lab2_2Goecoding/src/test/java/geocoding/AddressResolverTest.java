@@ -1,13 +1,12 @@
-package org.example;
+package geocoding;
 
+import connection.ISimpleHttpClient;
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.exceptions.misusing.PotentialStubbingProblem;
 import org.mockito.junit.jupiter.MockitoExtension;
 

@@ -1,4 +1,4 @@
-package org.example;
+package geocoding;
 
 import java.util.ArrayList;
 import java.util.List;

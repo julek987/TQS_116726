@@ -1,4 +1,4 @@
-package org.example;
+package geocoding;
 
 import java.util.Objects;
 

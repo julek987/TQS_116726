@@ -1,4 +1,4 @@
-package org.example;
+package geocoding;
 
 public class Stock {
     private String label;
