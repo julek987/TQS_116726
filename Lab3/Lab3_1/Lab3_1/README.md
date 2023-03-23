@@ -3,7 +3,7 @@
 
 **a) Identify a couple of examples that use AssertJ expressive methods chaining.**
 
-```
+```java
     assertThat(allEmployees).hasSize(3).extracting(Employee::getName).containsOnly(alex.getName(), ron.getName(), bob.getName());
 
     assertThat(found).extracting(Employee::getName).containsOnly("bob");
@@ -15,7 +15,7 @@ database).**
 
 We mock the behavior of the repository using Mockito library. First, the user creates a mocked variable and injects the mock as shown below:
 
-```
+```java
 @Mock( lenient = true)
     private EmployeeRepository employeeRepository;
 
@@ -24,7 +24,7 @@ We mock the behavior of the repository using Mockito library. First, the user cr
 ```
 
 Then, user can use the mocked variable and control the mocked response with Mockito.when() method.
-```
+```java
         Employee john = new Employee("john", "john@deti.com");
         john.setId(111L);
 
