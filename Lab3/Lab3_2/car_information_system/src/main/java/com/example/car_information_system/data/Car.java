@@ -1,6 +1,8 @@
 package com.example.car_information_system.data;
 
 import jakarta.persistence.*;
+
+import org.jetbrains.annotations.NotNull;
 @Entity
 @Table(name = "cars")
 public class Car {
@@ -26,10 +28,10 @@ public class Car {
     public String getMaker(){
         return maker;
     }
-    public String getMode(){
+    public String getModel(){
         return model;
     }
-    public void setCarid(Long id){
+    public void setCarId(Long id){
         this.carid=id;
     }
     public void setMaker(String s){

@@ -11,14 +11,17 @@ import java.util.Optional;
 public class CarManagerService {
     @Autowired
     private CarRepository carRepository;
-    public Car save(Car car){
+
+    public Car save(Car car) {
         return carRepository.save(car);
     }
-    public List<Car> getAllCars(){
+
+    public List<Car> getAllCars() {
         return carRepository.findAll();
     }
-    public Optional<Car> getCarDetails(Long id){
-        return Optional.ofNullable(carRepository.findByCarId(id));
+
+    public Optional<Car> getCarDetails(Long carId){
+        return carRepository.findByCarId(carId);
     }
 
 }
