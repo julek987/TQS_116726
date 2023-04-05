@@ -12,7 +12,6 @@ public class Car {
     private String maker;
     private String model;
     public Car(){
-
     }
     public Car(String maker , String model){
         this.maker=maker;
@@ -43,6 +42,4 @@ public class Car {
     public String toString(){
         return "Car ID: "+carid+" Car maker: "+maker+" Car model: "+model;
     }
-
-
 }

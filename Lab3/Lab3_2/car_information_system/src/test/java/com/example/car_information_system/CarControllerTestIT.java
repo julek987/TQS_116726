@@ -36,16 +36,16 @@ public class CarControllerTestIT {
     }
     @Test
     public void testPostCar() {
-        Car tesla3 = new Car("Tesla", "Model 3");
+        Car tesla3 = new Car("Fiat", "Tipo");
         tesla3.setCarId(1L);
         ResponseEntity<Car> entity = restTemplate.postForEntity("/api/cars", tesla3, Car.class);
 
         List<Car> found = repository.findAll();
-        assertThat(found).extracting(Car::getModel).containsOnly("Model 3");
+        assertThat(found).extracting(Car::getModel).containsOnly("Tipo");
     }
     @Test
     public void testGetCarIdValid() {
-        Car newCar = new Car("Tesla", "Model 3");
+        Car newCar = new Car("Fiat", "Tipo");
         repository.saveAndFlush(newCar);
 
         ResponseEntity<Car> response = restTemplate
@@ -53,7 +53,7 @@ public class CarControllerTestIT {
                 });
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).extracting(Car::getModel).isEqualTo("Model 3");
+        assertThat(response.getBody()).extracting(Car::getModel).isEqualTo("Tipo");
 
     }
 }

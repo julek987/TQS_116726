@@ -20,11 +20,11 @@ public class CarRepositoryTest {
     private CarRepository carRepository;
     @Test
     public void testCarValidId() {
-        Car tesla3 = new Car("Tesla", "Model 3");
-        entityManager.persistAndFlush(tesla3);
+        Car FiatT = new Car("Fiat", "Tipo");
+        entityManager.persistAndFlush(FiatT);
 
-        Car carFromDb = carRepository.findByCarId(tesla3.getCarId());
+        Optional<Car> carFromDb = carRepository.findByCarId(FiatT.getCarId());
         assertThat(carFromDb).isNotNull();
-        assertThat(carFromDb.getModel()).isEqualTo( tesla3.getModel());
+        assertThat(carFromDb.get()).isEqualTo(FiatT.getModel());
     }
 }

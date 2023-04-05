@@ -29,19 +29,19 @@ public class CarServiceUnitTest {
     private CarManagerService carManagerService;
     @BeforeEach
     public void setUp() {
-        Car tesla3 = new Car("Tesla", "Model 3");
-        tesla3.setCarId(1L);
-        Car teslas = new Car("Tesla", "Model S");
-        teslas.setCarId(2L);
-        Car teslax = new Car("Tesla", "Model X");
-        teslax.setCarId(3L);
+        Car FiatT = new Car("Fiat", "Tipo");
+        FiatT.setCarId(1L);
+        Car FiatT2 = new Car("FIat", "Tipo 2");
+        FiatT2.setCarId(2L);
+        Car FiatSuper = new Car("Fiat", "Tipo Super");
+        FiatSuper.setCarId(3L);
 
-        List<Car> allCars = Arrays.asList(tesla3, teslas, teslax);
+        List<Car> allCars = Arrays.asList(FiatT, FiatT2, FiatSuper);
 
         Mockito.when(carRepository.findAll()).thenReturn(allCars);
-        Mockito.when(carRepository.findByCarId(tesla3.getCarId())).thenReturn(Optional.of(tesla3));
-        Mockito.when(carRepository.findByCarId(teslas.getCarId())).thenReturn(Optional.of(teslas));
-        Mockito.when(carRepository.findByCarId(teslax.getCarId())).thenReturn(Optional.of(teslax));
+        Mockito.when(carRepository.findByCarId(FiatT.getCarId())).thenReturn(Optional.of(FiatT));
+        Mockito.when(carRepository.findByCarId(FiatT2.getCarId())).thenReturn(Optional.of(FiatT2));
+        Mockito.when(carRepository.findByCarId(FiatSuper.getCarId())).thenReturn(Optional.of(FiatSuper));
         Mockito.when(carRepository.findByCarId(99L)).thenReturn(Optional.empty());
     }
 
@@ -53,7 +53,7 @@ public class CarServiceUnitTest {
 
         Car carFromOptional = carFromDb.get();
 
-        assertThat(carFromOptional.getModel()).isEqualTo("Model 3");
+        assertThat(carFromOptional.getModel()).isEqualTo("Tipo");
 
         Mockito.verify(carRepository, times(1)).findByCarId(Mockito.anyLong());
 
