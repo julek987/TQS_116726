@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Lab1/Lab1_1(Stack)/pom.xml" />
+        <option value="$PROJECT_DIR$/Lab1/Lab1_2EuroMillions/pom.xml" />
+        <option value="$PROJECT_DIR$/Lab2/Lab2_1StocksPortfolio/pom.xml" />
+        <option value="$PROJECT_DIR$/Lab2/Lab2_2Goecoding/pom.xml" />
+        <option value="$PROJECT_DIR$/Lab3/Lab3_1/Lab3_1/pom.xml" />
+        <option value="$PROJECT_DIR$/Lab3/Lab3_2/car_information_system/pom.xml" />
+      </list>
+    </option>
+  </component>
+</project>

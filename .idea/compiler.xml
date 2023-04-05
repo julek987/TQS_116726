@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="StockPortfolio" />
+        <module name="Lab2_2Goecoding" />
+        <module name="euromillions" />
+        <module name="employee-mngr" />
+        <module name="car_information_system" />
+        <module name="Stack" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="car_information_system" options="-parameters" />
+      <module name="employee-mngr" options="-parameters" />
+    </option>
+  </component>
+</project>
